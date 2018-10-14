@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".game.Complexity">
 
     <TextView
-        android:id="@+id/greeting"
+        android:id="@+id/quantityOfMembers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="Welcome To Alias!"
-        android:textSize="30sp"
+        android:text="Количество участников: ---"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,13 +24,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="114dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
-        android:text="Игра на двоих"
-        android:onClick="setTwoMembers"
+        android:text="Игра простой сложности"
+        android:onClick="startGame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/greeting" />
+        app:layout_constraintTop_toBottomOf="@+id/quantityOfMembers" />
 
     <Button
         android:id="@+id/button2"
@@ -40,35 +39,23 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Игра на четверых"
-        android:onClick="setFourMembers"
+        android:text="Игра средней сложности"
+        android:onClick="startGame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Произвольная игра"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
-
-    <Button
-        android:id="@+id/rules_btn"
-        android:onClick="openRules"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Правила игры"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:backgroundTint="@color/colorBlue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
 
 </android.support.constraint.ConstraintLayout>
